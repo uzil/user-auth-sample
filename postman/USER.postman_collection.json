@@ -1,0 +1,57 @@
+{
+	"id": "46781cd0-4fd8-b4b0-dd1c-c7df23df5038",
+	"name": "USER",
+	"description": "",
+	"order": [
+		"8c02606d-7685-3fb5-6bf9-013445f399c7",
+		"7cb32330-2870-8823-8a06-875795479bf3"
+	],
+	"folders": [],
+	"timestamp": 1483466711349,
+	"owner": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "7cb32330-2870-8823-8a06-875795479bf3",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://localhost:3000/user/login",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "46781cd0-4fd8-b4b0-dd1c-c7df23df5038",
+			"data": [],
+			"dataMode": "raw",
+			"name": "login",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1483482456882,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"username\": \"testUser\",\n\t\"password\": \"testUser\"\n}"
+		},
+		{
+			"id": "8c02606d-7685-3fb5-6bf9-013445f399c7",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://localhost:3000/user/register",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "46781cd0-4fd8-b4b0-dd1c-c7df23df5038",
+			"data": [],
+			"dataMode": "raw",
+			"name": "register user",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1483466711348,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"username\": \"testUser\",\n\t\"email\": \"email@email.com\",\n\t\"password\": \"testUser\"\n}"
+		}
+	]
+}

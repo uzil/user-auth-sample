@@ -1,0 +1,25 @@
+{
+  "name": "usersystem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/*.tests.js",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "joi": "^10.1.0",
+    "jsonwebtoken": "^7.2.1",
+    "md5": "^2.2.1",
+    "mongoose": "^4.7.6"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "should": "^11.1.2",
+    "supertest": "^2.0.1"
+  }
+}

@@ -1,0 +1,94 @@
+swagger: '2.0'
+info:
+  title: User API
+  description: TV API
+  version: "1.0.0"
+host: localhost:3000
+schemes:
+  - http
+basePath: /
+produces:
+  - application/json
+paths:
+  /user/register:
+    post:
+      summary: registers new user
+      parameters:
+        - name: values
+          in: body
+          description: values to create
+          required: true
+          schema:
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+              email:
+                type: string
+              firstname:
+                type: string
+              lastname:
+                type: string
+            required: ['username', 'password']
+      responses:
+        201:
+          description: created user data
+          schema:
+            properties:
+              message:
+                type: string
+        400:
+          description: validation error
+          schema:
+            $ref: '#/definitions/Error'
+  /user/login:
+    post:
+      summary: user login
+      parameters:
+        - name: values
+          in: body
+          description: values to update
+          required: true
+          schema:
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+            required: ['username', 'password']
+      responses:
+        200:
+          description: successfully logged in
+          schema:
+            properties:
+              token:
+                type: string
+              user:
+                $ref: '#/definitions/User'
+        400:
+          description: invalid credentials
+          schema:
+            $ref: '#/definitions/Error'
+        
+definitions:
+  User:
+    type: object
+    properties:
+      id:
+        type: string
+      username:
+        type: string
+      firstname:
+        type: string
+      lastname:
+        type: string
+      email:
+        type: string
+  Error:
+    type: object
+    properties:
+      statusCode:
+        type: number
+      message:
+        type: string
